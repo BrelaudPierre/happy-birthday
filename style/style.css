@@ -67,9 +67,7 @@
   color: var(--light);
 }
 
-
-
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1700px) {
   #responsive {
     visibility: hidden;
   }
