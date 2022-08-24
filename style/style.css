@@ -12,6 +12,10 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+html {
+  background-color: var(--black);
+}
+
 /* B45D6B */
 
 /* 77344A C47674*/
