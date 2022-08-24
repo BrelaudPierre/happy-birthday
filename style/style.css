@@ -21,6 +21,7 @@
 #confetti {
   position: absolute;
   top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -34,4 +35,42 @@
 #container {
   width: 100vw;
   height: 100vh;
+}
+
+#responsive {
+  z-index: 10000;
+  width: 100vw;
+  height: 100vh;
+  background: var(--black);
+  position: absolute;
+  top: 0;
+}
+
+#responsive #content {
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  width: 100%;
+}
+#responsive h1 {
+  position: relative;
+  margin-bottom: 50px;
+  font-size: 15vw;
+  color: var(--salmon);
+}
+
+#responsive p {
+  font-size: 4vw;
+  margin-top: 20px;
+  color: var(--light);
+}
+
+
+
+@media screen and (max-width: 500px) {
+  #responsive {
+    visibility: hidden;
+  }
 }

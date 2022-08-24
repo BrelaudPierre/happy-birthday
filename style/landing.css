@@ -1,6 +1,13 @@
 #landing {
   background-color: var(--black);
   padding: 50px;
+  transition: all 0.6s;
+}
+
+#landing.hide {
+  left: -100%;
+  background-color: var(--black);
+  padding: 50px;
 }
 
 #landing .title {

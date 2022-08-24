@@ -1,5 +1,6 @@
 const menu = document.getElementById("menu");
 const main = document.getElementById("main");
+const landing = document.getElementById("landing");
 
 const yearsScroll = document.getElementById("yearsscroll");
 const birthday = document.getElementById("birthday");
@@ -27,11 +28,11 @@ const triggerConfetti = () => {
   });
 };
 
-// triggerConfetti();
+triggerConfetti();
 
-// const confettiInterval = setInterval(() => {
-//   triggerConfetti();
-// }, 4000);
+const confettiInterval = setInterval(() => {
+  triggerConfetti();
+}, 4000);
 
 // MENU
 const onMenuClick = () => {
@@ -42,7 +43,7 @@ const onMenuClick = () => {
 const up = document.getElementById("up");
 const down = document.getElementById("down");
 let yearsPos = 0;
-const scrollSpeed = 300;
+const scrollSpeed = 60;
 const yearsHeight = yearsScroll.offsetHeight;
 
 up.addEventListener("click", () => {
@@ -115,8 +116,8 @@ const successStep1 = {
 const successStep2 = {
   title: "Quelle couleur pour l'année prochaine ?👩‍🦰👩‍🦳",
   message:
-    "Petit défi maintenant ! Tirez une couleur aléatoirement, celle-ci devra être teinte avant le prochain anniversaire !",
-  button: "Couleur",
+    "Petit défi maintenant ! Tirez une couleur aléatoirement, celle-ci devra être teinte avant le prochain anniversaire ! En cliquant sur 'jouer' vous vous engagez à effectuer cette teinture dans un délai inférieur à 1 an !",
+  button: "Jouer",
 };
 
 const successStep3 = {
@@ -126,9 +127,9 @@ const successStep3 = {
 };
 
 const successStep4 = {
-  title: "",
+  title: "Vous touchez au but !",
   message:
-    "Désolé de vous informer que vous n'êtes plus si jeune que ça ! 👵🏻👵🏻👵🏻",
+    "A vous de découvrir cette application ! Pour ne pas bousculer vos habitudes ce projet répond aux critères standards à savoir : Bugs (appelés aussi features), retards et d'autres surprises à découvrir. N'hésitez pas à créer des tickets.",
   button: "Découvrir",
 };
 
@@ -159,11 +160,12 @@ successPopupButton.addEventListener("click", () => {
     successPopupButton.innerHTML = successStep3.button;
     currentStep = 3;
   } else if (currentStep == 3) {
-    successPopupCurtain.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
     successPopupTitle.innerHTML = successStep4.title;
     successPopupMessage.innerHTML = successStep4.message;
     successPopupButton.innerHTML = successStep4.button;
     currentStep = 4;
+  } else {
+    landing.classList.add("hide");
   }
 });
 
