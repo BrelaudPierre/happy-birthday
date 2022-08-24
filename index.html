@@ -1,0 +1,139 @@
+<head>
+  <style>
+    body {
+      margin: 0;
+    }
+  </style>
+
+  <script src="//unpkg.com/react/umd/react.production.min.js"></script>
+  <script src="//unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
+  <script src="//unpkg.com/babel-standalone"></script>
+  <script src="//unpkg.com/react-globe.gl"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="./style/style.css" />
+  <link rel="stylesheet" href="./style/menu.css" />
+  <link rel="stylesheet" href="./style/main.css" />
+  <link rel="stylesheet" href="./style/landing.css" />
+</head>
+
+<body>
+  <div id="container">
+    <!-- 3D visualization -->
+    <div id="globe"></div>
+
+    <!-- Main content -->
+    <div id="main"></div>
+
+    <!-- Menu button-->
+    <div id="menu">MENU</div>
+
+    <!-- Landing section -->
+    <div id="landing">
+      <!-- <div id="years"> -->
+        <div id="years" class="visible">
+        <div id="yearsscroll">
+          <div class="description">
+            Le but du jeu est le suivant, ne pas s'endormir avant d'avoir
+            renseigné sa date de naissance ! Un exercice simple pour les uns
+            mais quasi impossible pour d'autres ! 😈😈😈
+          </div>
+          <div class="start">Le jeu commence ici :</div>
+          <div class="rows">
+            <div class="row" data-type="wrong">2022</div>
+            <div id="good-date" class="row">1984</div>
+            <div class="row" data-type="error">Ça va être long</div>
+            <div class="row" data-type="wrong">2021</div>
+            <div class="row" data-type="wrong">2020</div>
+            <div class="row" data-type="wrong">2019</div>
+            <div class="row" data-type="wrong">2018</div>
+            <div class="row" data-type="wrong">2017</div>
+            <div class="row" data-type="error">Hydraté vous !</div>
+            <div class="row" data-type="wrong">2016</div>
+            <div class="row" data-type="wrong">2015</div>
+            <div class="row" data-type="wrong">2014</div>
+            <div class="row" data-type="wrong">2013</div>
+            <div class="row" data-type="error">Faites une pause si besoin !</div>
+            <div class="row" data-type="wrong">2012</div>
+            <div class="row" data-type="wrong">2011</div>
+            <div class="row" data-type="wrong">2010</div>
+            <div class="row" data-type="wrong">2009</div>
+            <div class="row" data-type="wrong">2008</div>
+            <div class="row" data-type="wrong">2007</div>
+            <div class="row" data-type="error">Patience patience</div>
+            <div class="row" data-type="wrong">2006</div>
+            <div class="row" data-type="wrong">2005</div>
+            <div class="row" data-type="wrong">2004</div>
+            <div class="row" data-type="error">On est à la moitié !</div>
+            <div class="row" data-type="wrong">2003</div>
+            <div class="row" data-type="wrong">2002</div>
+            <div class="row" data-type="wrong">2001</div>
+            <div class="row" data-type="wrong">2000</div>
+            <div class="row" data-type="wrong">1999</div>
+            <div class="row" data-type="error">Ne forcez pas trop !</div>
+            <div class="row" data-type="wrong">1998</div>
+            <div class="row" data-type="wrong">1997</div>
+            <div class="row" data-type="wrong">1996</div>
+            <div class="row" data-type="wrong">1995</div>
+            <div class="row" data-type="wrong">1994</div>
+            <div class="row" data-type="error">Bientôt la fin !🥱🥱🥱</div>
+            <div class="row" data-type="wrong">1993</div>
+            <div class="row" data-type="wrong">1992</div>
+            <div class="row" data-type="wrong">1991</div>
+            <div class="row" data-type="wrong">1990</div>
+            <div class="row" data-type="wrong">1989</div>
+            <div class="row" data-type="error">Courage ! 💪💪💪💪</div>
+            <div class="row" data-type="wrong">1988</div>
+            <div class="row" data-type="wrong">1987</div>
+            <div class="row" data-type="wrong">1986</div>
+            <div class="row" data-type="wrong">1985</div>
+            <div class="row" data-type="error">Enfin finis 😴😴😴</div>
+            <!-- <div id="good-date" class="row">1984</div> -->
+            <div class="row" data-type="error"></div>
+          </div>
+          <div class="buttons">
+            <button id="up"><i class="fa-solid fa-chevron-up"></i></button>
+            <button id="down"><i class="fa-solid fa-chevron-down"></i></button>
+          </div>
+        </div>
+        <div id="years-popup">
+          <div id="years-popup-curtain"></div>
+          <div id="years-popup-content">
+            <h1 id="years-popup-title"></h1>
+            <p id="years-popup-message"></p>
+          </div>
+        </div>
+        <div id="success-popup">
+          <div id="success-popup-curtain"></div>
+          <div id="success-popup-content">
+            <h1 id="success-popup-title"></h1>
+            <p id="success-popup-message"></p>
+            <button id="success-popup-button"></button>
+          </div>
+        </div>
+      </div>
+      <div class="title">HAPPY BIRTHDAY</div>
+      <div class="subtitle">
+        Merci de renseigner votre année de naissance pour accèder au contenu !
+      </div>
+      <div id="birthday">Votre année de naissance</div>
+    </div>
+  </div>
+</body>
+
+<script type="text/babel" src="./js/main.js"></script>
+<script type="text/babel" src="./js/globe.js"></script>

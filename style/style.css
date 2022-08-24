@@ -1,0 +1,37 @@
+:root {
+  --black: #000000;
+  --salmon: #b45d6b;
+  --light: #ab9f9f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+/* B45D6B */
+
+/* 77344A C47674*/
+
+#globe,
+#landing,
+#main,
+#confetti {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#confetti {
+  pointer-events: none;
+  z-index: 3;
+}
+
+#container {
+  width: 100vw;
+  height: 100vh;
+}

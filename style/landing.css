@@ -1,0 +1,241 @@
+#landing {
+  background-color: var(--black);
+  padding: 50px;
+}
+
+#landing .title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+
+  background: linear-gradient(97.17deg, #77344a 0%, #c47674 87.22%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#landing .subtitle {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 29px;
+  color: var(--light);
+  margin-top: 30px;
+  width: 100%;
+}
+
+#landing #birthday {
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+  border: solid thin var(--salmon);
+  border-radius: 10px;
+  display: inline-block;
+  padding: 10px 20px;
+  color: var(--light)
+}
+
+#landing #years {
+  transition: left 0.3s, opacity 0.6s, top 1s;
+  z-index: 1;
+  overflow: hidden;
+  background-color: var(--black);
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: -100%;
+  opacity: 0;
+}
+
+/* SUCCESS POPUP */
+#landing #years #success-popup.visible {
+  left: 0;
+  opacity: 1;
+}
+
+#landing #years #success-popup #success-popup-content {
+  left: 50%;
+  opacity: 1!important;
+}
+
+#landing #years #success-popup, #landing #years #success-popup #success-popup-content {
+  left: -100%;
+  transition: left 0, opacity 0.4s;
+  opacity: 0;
+}
+
+#landing #years #success-popup {
+  position: absolute;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+}
+
+#landing #years #success-popup #success-popup-curtain {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#landing #years #success-popup #success-popup-content #success-popup-title {
+  color: var(--black);
+  font-size: 30px;
+}
+
+#landing #years #success-popup #success-popup-content #success-popup-message {
+  margin-top: 20px;
+  color: var(--black);
+  font-size: 16px;
+}
+
+#landing #years #success-popup #success-popup-content #success-popup-button {
+  margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--black);
+  color: var(--light);
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#landing #years #success-popup #success-popup-content {
+  opacity: 0;
+  border-radius: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%);
+  background-color: var(--salmon);
+  padding: 30px;
+}
+
+/* YEARS POPUP */
+#landing #years #years-popup.visible {
+  left: 0;
+  opacity: 1;
+}
+
+#landing #years #years-popup #years-popup-content {
+  left: 50%;
+  opacity: 1!important;
+}
+
+#landing #years #years-popup, #landing #years #years-popup #years-popup-content {
+  left: -100%;
+  transition: left 0, opacity 0.4s;
+  opacity: 0;
+}
+
+#landing #years #years-popup {
+  position: absolute;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+}
+
+#landing #years #years-popup #years-popup-content {
+  opacity: 0;
+  border-radius: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%);
+  background-color: var(--salmon);
+  padding: 30px;
+}
+
+#landing #years #years-popup #years-popup-curtain {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#landing #years #years-popup #years-popup-content #years-popup-title {
+  color: var(--black);
+  font-size: 30px;
+}
+
+#landing #years #years-popup #years-popup-content #years-popup-message {
+  margin-top: 20px;
+  color: var(--black);
+  font-size: 16px;
+}
+
+#landing #years #yearsscroll {
+  transition: top 0.8s;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#landing #years.visible {
+  left: 0;
+  opacity: 1;
+}
+
+#landing #years .buttons {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: fixed;
+  bottom: 10px;
+}
+
+#landing #years .buttons button {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  margin: 10px 20px;
+  background-color: var(--salmon);
+  color: #FFFFFF;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+}
+
+#landing #years .description {
+  padding: 20px;
+  line-height: 30px;
+  color: var(--light);
+}
+
+#landing #years .start {
+  background-color: var(--salmon);
+  color: var(--black);
+  padding: 10px;
+  font-weight: bold;
+}
+
+#landing #years .row {
+  position: relative;
+  padding: 40px;
+  color: var(--light);
+  cursor: pointer;
+  width: 100%;
+}
+
+#landing #years .row:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  height: 1px;
+  width: 90%;
+  background-color: var(--salmon);
+}
+
+#landing #years .row:last-child:after {
+  width: 0;
+}

@@ -1,0 +1,11 @@
+#main {
+  transition: left 0.3s, opacity 0.6s;
+  left: -100%;
+  background-color: var(--salmon);
+  opacity: 0;
+}
+
+#main.visible {
+  left: 0;
+  opacity: 1;
+}
