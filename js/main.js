@@ -1,4 +1,4 @@
-const menu = document.getElementById("menu");
+const more = document.getElementById("more");
 const main = document.getElementById("main");
 const landing = document.getElementById("landing");
 
@@ -43,7 +43,7 @@ const onMenuClick = () => {
 const up = document.getElementById("up");
 const down = document.getElementById("down");
 let yearsPos = 0;
-const scrollSpeed = 60;
+const scrollSpeed = 40;
 const yearsHeight = yearsScroll.offsetHeight;
 
 up.addEventListener("click", () => {
@@ -180,8 +180,15 @@ successPopupCurtain.addEventListener("click", () => {
 });
 
 // TOGGLE MENU
-menu.addEventListener("click", () => {
+
+const menuMore = document.getElementById("menu-more");
+const menuMinus = document.getElementById("menu-minus");
+
+more.addEventListener("click", () => {
+  menuMore.classList.toggle("hide");
+  menuMinus.classList.toggle("hide");
   main.classList.toggle("visible");
+  more.classList.toggle("active");
 });
 
 // TOGGLE DATES

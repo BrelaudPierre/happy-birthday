@@ -25,11 +25,12 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  z-index: 1;
 }
 
 #confetti {
   pointer-events: none;
-  z-index: 3;
+  z-index: 30;
 }
 
 #container {
@@ -71,4 +72,8 @@
   #responsive {
     visibility: hidden;
   }
+}
+
+canvas div {
+  z-index: 0;
 }

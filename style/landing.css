@@ -1,7 +1,8 @@
 #landing {
   background-color: var(--black);
-  padding: 50px;
+  padding: 30px;
   transition: all 0.6s;
+  z-index: 20;
   /* visibility: hidden; */
 }
 
@@ -16,7 +17,6 @@
   font-style: normal;
   font-weight: 700;
   font-size: 50px;
-
   background: linear-gradient(97.17deg, #77344a 0%, #c47674 87.22%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -215,6 +215,7 @@
   border: none;
   border-radius: 50%;
   touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 #landing #years .description {
