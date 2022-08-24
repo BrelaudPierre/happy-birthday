@@ -4,7 +4,10 @@
       margin: 0;
     }
   </style>
-
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+  />
   <script src="//unpkg.com/react/umd/react.production.min.js"></script>
   <script src="//unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
   <script src="//unpkg.com/babel-standalone"></script>
@@ -45,7 +48,6 @@
     <!-- Landing section -->
     <div id="landing">
       <div id="years">
-      <!-- <div id="years" class="visible"> -->
         <div id="yearsscroll">
           <div class="description">
             Le but du jeu est le suivant, ne pas s'endormir avant d'avoir
@@ -55,7 +57,6 @@
           <div class="start">Le jeu commence ici :</div>
           <div class="rows">
             <div class="row" data-type="wrong">2022</div>
-            <!-- <div id="good-date" class="row">1984</div> -->
             <div class="row" data-type="error">Ça va être long</div>
             <div class="row" data-type="wrong">2021</div>
             <div class="row" data-type="wrong">2020</div>
@@ -138,8 +139,11 @@
   <div id="responsive">
     <div id="content">
       <h1>Oups</h1>
-      <p>Faut pas déconner ! Qu'est ce que serait une app sans un minimum de retard ! </p>
-      <p>Merci de repasser une prochaine fois ! 😉 </p>
+      <p>
+        Faut pas déconner ! Qu'est ce que serait une app sans un minimum de
+        retard !
+      </p>
+      <p>Merci de repasser une prochaine fois ! 😉</p>
     </div>
   </div>
 </body>

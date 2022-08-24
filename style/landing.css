@@ -2,6 +2,7 @@
   background-color: var(--black);
   padding: 50px;
   transition: all 0.6s;
+  /* visibility: hidden; */
 }
 
 #landing.hide {
@@ -41,7 +42,7 @@
   border-radius: 10px;
   display: inline-block;
   padding: 10px 20px;
-  color: var(--light)
+  color: var(--light);
 }
 
 #landing #years {
@@ -65,10 +66,11 @@
 
 #landing #years #success-popup #success-popup-content {
   left: 50%;
-  opacity: 1!important;
+  opacity: 1 !important;
 }
 
-#landing #years #success-popup, #landing #years #success-popup #success-popup-content {
+#landing #years #success-popup,
+#landing #years #success-popup #success-popup-content {
   left: -100%;
   transition: left 0, opacity 0.4s;
   opacity: 0;
@@ -130,10 +132,11 @@
 
 #landing #years #years-popup #years-popup-content {
   left: 50%;
-  opacity: 1!important;
+  opacity: 1 !important;
 }
 
-#landing #years #years-popup, #landing #years #years-popup #years-popup-content {
+#landing #years #years-popup,
+#landing #years #years-popup #years-popup-content {
   left: -100%;
   transition: left 0, opacity 0.4s;
   opacity: 0;
@@ -200,16 +203,18 @@
 }
 
 #landing #years .buttons button {
+  outline: none;
   cursor: pointer;
   width: 50px;
   height: 50px;
   margin: 10px 20px;
   background-color: var(--salmon);
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: 700;
   outline: none;
   border: none;
   border-radius: 50%;
+  touch-action: manipulation;
 }
 
 #landing #years .description {
